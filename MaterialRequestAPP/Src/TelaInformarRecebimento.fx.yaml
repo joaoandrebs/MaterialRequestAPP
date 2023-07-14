@@ -1,0 +1,748 @@
+TelaInformarRecebimento As screen:
+    BackgroundImage: =
+    ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Gallery3_1 As gallery.galleryVertical:
+        BorderColor: =RGBA(0, 42, 74, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =491
+        Items: |-
+            =SortByColumns(Filter(
+                'Solicitação Materiais',
+                Len(txtNumeropedido1_1.Text) = 0 || IDSolicitantes = txtNumeropedido1_1.Text,
+                Len(txtNumeroReserva1.Text) = 0 || 'Numero da Reserva' = Int(txtNumeroReserva1.Text),
+                Len(ComboBox_3.Selected.Value) = 0 || 'Status Recebimento' = ComboBox_3.Selected.Value,
+                'Aprovação Financeira' = "Aprovado"),"Created",SortOrder.Descending)
+            
+            /* ---------- VERSÃO 1 ------------------
+            SortByColumns(If(IsBlank(txtNumeropedido1_1);
+            Filter('Solicitação Materiais';'Financeiro Aprovou Compra' = true);
+            Filter('Solicitação Materiais';IDSolicitantes = txtNumeropedido1_1.Text;'Financeiro Aprovou Compra' = true));"Created";SortOrder.Descending)*/
+        Layout: =Layout.Vertical
+        TemplateSize: =157
+        Width: =1177
+        Y: =299
+        ZIndex: =4
+
+        Button3_1 As button:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(ThisItem.'Status Recebimento' = "Total", DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(0, 120, 212, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                = Patch('Solicitação Materiais',ThisItem, {'Status Recebimento':"Total"})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: =If(ThisItem.'Status Recebimento' = "Total", "Item Recebido ✔", "Recebimento Total")
+            Visible: =If(IsBlank(ThisItem.'Numero da Reserva'),false,true)
+            Width: =117
+            X: =840
+            Y: =18
+            ZIndex: =8
+
+        Label3_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.Descrição
+            Width: =241
+            X: =350
+            Y: =18
+            ZIndex: =9
+
+        Label4_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.Kardex
+            Width: =130
+            X: =200
+            Y: =18
+            ZIndex: =10
+
+        Label4_11 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.Title
+            Width: =75
+            X: =103
+            Y: =18
+            ZIndex: =11
+
+        Label4_12 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.Quantidade
+            Width: =60
+            X: =622
+            Y: =18
+            ZIndex: =12
+
+        Label4_15 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.'Numero da Reserva'
+            Width: =100
+            X: =705
+            Y: =18
+            ZIndex: =15
+
+        Label4_29 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(153, 201, 238, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.IDSolicitantes
+            Width: =75
+            X: =8
+            Y: =18
+            ZIndex: =16
+
+        Button3_4 As button:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(ThisItem.'Status Recebimento' = "Parcial", DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(0, 120, 212, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                = Patch('Solicitação Materiais',ThisItem, {'Status Recebimento':"Parcial"})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.5
+            Text: =If(ThisItem.'Status Recebimento' = "Parcial", "Recebido Parcialmente ✔", "Recebimento Parcial")
+            Visible: |-
+                =If(ThisItem.'Status Recebimento' = "Total",false,true)
+                
+                //If(IsBlank(ThisItem.'Numero da Reserva');false;true)
+            Width: =117
+            X: =992
+            Y: =18
+            ZIndex: =17
+
+        Label3_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(153, 153, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =71
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =12
+            Text: =ThisItem.'Motivo da Solicitação'
+            Width: =583
+            X: =8
+            Y: =77
+            ZIndex: =18
+
+        Label20 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =41
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =11
+            Text: ="👷 " & ThisItem.'Created By'.DisplayName
+            Width: =166
+            X: =622
+            Y: =92
+            ZIndex: =19
+
+        TextInput7 As text:
+            Align: =Align.Center
+            BorderColor: =RGBA(39, 113, 194, 1)
+            BorderThickness: =3
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            Height: =47
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =18
+            Visible: =If(ThisItem.'Status Recebimento' = "Parcial", true,false)
+            Width: =78
+            X: =852
+            Y: =77
+            ZIndex: =20
+
+        btnAtualizar As button:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(ThisItem.'Quanto Chegou' = ThisItem.Quantidade, DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(0, 120, 212, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch('Solicitação Materiais',ThisItem,{'Quanto Chegou':Value(TextInput7.Text)})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =12
+            Text: ="Atualizar"
+            Visible: =If(ThisItem.'Status Recebimento' = "Parcial", true,false)
+            Width: =94
+            X: =1003
+            Y: =75
+            ZIndex: =21
+
+        Label30 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =10.5
+            Text: ="Digite a QTD recebida"
+            Visible: =If(ThisItem.'Status Recebimento' = "Parcial", true,false)
+            Width: =169
+            X: =819
+            Y: =133
+            ZIndex: =22
+
+        Label30_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =10
+            Text: |-
+                ="Informado: " & ThisItem.'Quanto Chegou' & " UND"
+            Visible: =If(ThisItem.'Status Recebimento' = "Parcial", true,false)
+            Width: =125
+            X: =988
+            Y: =133
+            ZIndex: =23
+
+    lblOrdemDeServico_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(90, 164, 232, 0)
+        Font: =Font.'Lato Black'
+        Height: =44
+        PaddingLeft: =0
+        Size: =10
+        Text: ="OS"
+        Visible: =Toggle2_2.Value
+        Width: =136
+        X: =86
+        Y: =270
+        ZIndex: =8
+
+    lblKardex_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(90, 164, 232, 0)
+        Font: =Font.'Lato Black'
+        Height: =44
+        PaddingLeft: =0
+        Size: =10
+        Text: ="KARDEX"
+        Visible: =Toggle2_2.Value
+        Width: =120
+        X: =216
+        Y: =270
+        ZIndex: =9
+
+    lblDescricao_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(90, 164, 232, 0)
+        Font: =Font.'Lato Black'
+        Height: =44
+        PaddingLeft: =0
+        Size: =10
+        Text: ="DESCRIÇÃO"
+        Visible: =Toggle2_2.Value
+        Width: =167
+        X: =400
+        Y: =270
+        ZIndex: =10
+
+    lblQuantidade_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(90, 164, 232, 0)
+        Font: =Font.'Lato Black'
+        Height: =44
+        PaddingLeft: =0
+        Size: =10
+        Text: ="QTD"
+        Visible: =Toggle2_2.Value
+        Width: =84
+        X: =619
+        Y: =270
+        ZIndex: =12
+
+    lblValorTotal_6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(90, 164, 232, 0)
+        Font: =Font.'Lato Black'
+        Height: =44
+        PaddingLeft: =0
+        Size: =10
+        Text: ="RESERVA"
+        Visible: =Toggle2_2.Value
+        Width: =106
+        X: =711
+        Y: =270
+        ZIndex: =14
+
+    Rectangle8_4 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 84, 148, 1)
+        FocusedBorderThickness: =1
+        Height: =87
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =1185
+        ZIndex: =22
+
+    Icon5_16 As icon.BackArrow:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =51
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.Fade)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =59
+        X: =28
+        Y: =18
+        ZIndex: =23
+
+    Image6_10 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =71
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =User().Image
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =174
+        X: =1011
+        Y: =6
+        ZIndex: =24
+
+    Label5_10 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =63
+        PaddingLeft: =0
+        Size: =15
+        Text: =User().FullName
+        Width: =212
+        X: =850
+        Y: =12
+        ZIndex: =25
+
+    Label13_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =31
+        PaddingLeft: =0
+        Size: =22
+        Text: ="Informar Recebimento"
+        Width: =294
+        X: =426
+        Y: =26
+        ZIndex: =26
+
+    lblOrdemDeServico_9 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(90, 164, 232, 0)
+        Font: =Font.'Lato Black'
+        Height: =44
+        PaddingLeft: =0
+        Size: =10
+        Text: ="PEDIDO"
+        Visible: =Toggle2_2.Value
+        Width: =80
+        X: =14
+        Y: =270
+        ZIndex: =27
+
+    Toggle2_2 As toggleSwitch:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        FalseFill: =RGBA(102, 102, 102, 1)
+        FalseHoverFill: =RGBA(33, 33, 33, 1)
+        FalseText: ="Off"
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        HandleFill: =RGBA(255, 255, 255, 1)
+        Height: =42
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =10.5
+        TrueFill: =RGBA(0, 120, 212, 1)
+        TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        TrueText: ="On"
+        Width: =112
+        X: =1065
+        Y: =130
+        ZIndex: =28
+
+    TextInput5_2 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="Legenda"
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Lato Black'
+        Height: =41
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =10.5
+        Width: =100
+        X: =1049
+        Y: =87
+        ZIndex: =29
+
+    ComboBox_3 As combobox:
+        BorderColor: =RGBA(0, 84, 148, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultSelectedItems: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        Height: =42
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Busca por Solicitante"
+        IsSearchable: =false
+        Items: =Distinct('Solicitação Materiais','Status Recebimento').Value
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
+        Size: =12
+        Width: =200
+        X: =528
+        Y: =198
+        ZIndex: =32
+
+    txtNumeropedido1_1 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 84, 148, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Format: =TextFormat.Number
+        Height: =44
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =12
+        Width: =112
+        X: =14
+        Y: =198
+        ZIndex: =33
+
+    Label6_10 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        PaddingLeft: =0
+        Size: =10.5
+        Text: ="Filtrar por pedido"
+        Width: =135
+        X: =138
+        Y: =202
+        ZIndex: =34
+
+    Label6_11 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        PaddingLeft: =0
+        Size: =10.5
+        Text: ="Filtrar por entrega"
+        Width: =135
+        X: =744
+        Y: =202
+        ZIndex: =35
+
+    txtNumeroReserva1 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 84, 148, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Format: =TextFormat.Number
+        Height: =44
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =12
+        Width: =112
+        X: =269
+        Y: =198
+        ZIndex: =36
+
+    Label6_12 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        PaddingLeft: =0
+        Size: =10.5
+        Text: ="Filtrar por reserva"
+        Width: =135
+        X: =393
+        Y: =202
+        ZIndex: =37
+

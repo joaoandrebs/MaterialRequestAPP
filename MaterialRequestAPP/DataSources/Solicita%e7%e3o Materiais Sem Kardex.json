@@ -1,0 +1,50 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-12-19T18:06:49.7970000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Anexos",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Nome de arquivo com extensão",
+      "{FullPath}": "Caminho Completo",
+      "{HasAttachments}": "Tem anexos",
+      "{Identifier}": "Identificador",
+      "{IsFolder}": "ÉPasta",
+      "{Link}": "Link para o item",
+      "{ModerationComment}": "Comentários associados à aprovação de conteúdo deste item de lista",
+      "{ModerationStatus}": "Status de aprovação de conteúdo",
+      "{Name}": "Nome",
+      "{Path}": "Caminho da pasta",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "Token de Fim da Janela de Acionamento",
+      "{TriggerWindowStartToken}": "Token de Início da Janela de Acionamento",
+      "{VersionNumber}": "Número da versão",
+      "Author": "Created By",
+      "Author#Claims": "Created By Claims",
+      "ComplianceAssetId": "Compliance Asset Id",
+      "Created": "Created",
+      "E_x002d_mail": "E-mail",
+      "Editor": "Modified By",
+      "Editor#Claims": "Modified By Claims",
+      "EmailAprovador": "Email Aprovador",
+      "ID": "ID",
+      "L_x00ed_derRespons_x00e1_vel": "Líder Responsável",
+      "Modified": "Modified",
+      "OData__x00c1_rea": "Área",
+      "OData__x00c1_rea#Id": "Área Id",
+      "Title": "Title",
+      "Turno": "Turno",
+      "Turno#Id": "Turno Id"
+    },
+    "DatasetName": "https://generalmotors.sharepoint.com/sites/manutencaoplanmat",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Solicitação Materiais Sem Kardex",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,825 @@
+TelaInicial As screen:
+    BackgroundImage: =
+    ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =UpdateContext({locShowMessage:true})
+
+    Rectangle8_2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(0, 84, 148, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 84, 148, 1)
+        FocusedBorderThickness: =1
+        Height: =159
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =1185
+        ZIndex: =1
+
+    Button10_2 As button:
+        BorderColor: =RGBA(255, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(184, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =250
+        HoverBorderColor: =RGBA(184, 0, 0, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0,0,0,0), -10%)
+        OnSelect: =
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =700
+        RadiusBottomRight: =700
+        RadiusTopLeft: =700
+        RadiusTopRight: =700
+        Size: =10.5
+        Text: =""
+        Visible: =varVerBotao5
+        Width: =440
+        X: =680
+        Y: =517
+        ZIndex: =2
+
+    Button10 As button:
+        BorderColor: =RGBA(0, 108, 191, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =318
+        HoverBorderColor: =RGBA(0, 84, 148, 1)
+        HoverColor: =ColorFade(RGBA(0,0,0,0), -10%)
+        HoverFill: =ColorFade(RGBA(0,0,0,0), -10%)
+        OnSelect: =
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =700
+        RadiusBottomRight: =700
+        RadiusTopLeft: =700
+        RadiusTopRight: =700
+        Size: =10.5
+        Text: =""
+        Visible: =varVerBotao5
+        Width: =500
+        X: =367
+        Y: =199
+        ZIndex: =3
+
+    Button10_1 As button:
+        BorderColor: =RGBA(54, 176, 75, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =250
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0,0,0,0), -10%)
+        OnSelect: =
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =700
+        RadiusBottomRight: =700
+        RadiusTopLeft: =700
+        RadiusTopRight: =700
+        Size: =10.5
+        Text: =""
+        Visible: =varVerBotao5
+        Width: =443
+        X: =103
+        Y: =517
+        ZIndex: =4
+
+    Button7_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(184, 0, 0, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =UpdateContext({varVerBotao1:true})
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =150
+        RadiusBottomRight: =150
+        RadiusTopLeft: =btnReferencia.RadiusTopLeft
+        RadiusTopRight: =150
+        Size: =10.5
+        Text: =""
+        Width: =btnReferencia.Width
+        X: =694
+        Y: =599
+        ZIndex: =5
+
+    Button7 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(50, 194, 185, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =UpdateContext({varVerBotao2:true})
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =150
+        RadiusBottomRight: =150
+        RadiusTopLeft: =btnReferencia.RadiusTopLeft
+        RadiusTopRight: =150
+        Size: =10.5
+        Text: =""
+        Width: =btnReferencia.Width
+        X: =407
+        Y: =370
+        ZIndex: =6
+
+    btnReferencia As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 108, 191, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =96
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =UpdateContext({varVerBotao:true})
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =150
+        RadiusBottomRight: =150
+        RadiusTopLeft: =150
+        RadiusTopRight: =150
+        Size: =10.5
+        Text: =""
+        Width: =96
+        X: =410
+        Y: =255
+        ZIndex: =7
+
+    Label1_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Segoe UI'
+        Height: =164
+        PaddingLeft: =0
+        Size: =23
+        Text: |+
+            =Switch(Param("Msg"),
+            "Aprovar","Olá "&User().FullName&","&Char(10)&"Clique no botão Aprovação da Área",
+            "Reservar","Olá "&User().FullName&","&Char(10)&"Clique no botão Efetuar Reserva",
+            "Analisar","Olá "&User().FullName&","&Char(10)&"Clique no botão Aprovação Financeira",
+            "Acompanhar","Olá "&User().FullName&","&Char(10)&"Clique no botão Monitorar pedidos",
+            "Informar","Olá "&User().FullName&","&Char(10)&"Clique no botão Recebimento",
+            "Olá "&User().FullName&","&Char(10)&"Selecione um dos campos abaixo para solicitação"
+            )
+            
+        Width: =865
+        X: =185
+        Y: =8
+        ZIndex: =8
+
+    btnReferencia2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 108, 191, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(TelaComKardex,ScreenTransition.Fade)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Solicitar Material"
+        Width: =266
+        X: =566
+        Y: =282
+        ZIndex: =9
+
+    Image2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =138
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =User().Image
+        ImagePosition: =ImagePosition.Fill
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
+        Width: =142
+        X: =30
+        Y: =8
+        ZIndex: =10
+
+    Button1_2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(UsuáriosdoOffice365.UserProfile(User().Email).Mail in 'config - SolicitaMaterial'.'Email Almoxarife',DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia2.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =If(Label1_1.Text = "Olá "&User().FullName&","&Char(10)&"Selecione um dos campos abaixo para solicitação", Navigate(TelaReservas,ScreenTransition.Fade), Navigate(TelaReservas,ScreenTransition.Fade,{IDSolicitante: Param("IDSolicitante")}))
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =btnReferencia2.Size
+        Text: ="Efetuar Reserva"
+        Width: =btnReferencia2.Width
+        X: =814
+        Y: =595
+        ZIndex: =11
+
+    btnAprovacaoArea As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(UsuáriosdoOffice365.UserProfile(User().Email).Mail in 'Matriz de Aprovação'.'Email Aprovador',DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(54, 176, 75, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia2.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Navigate(TelaAprovacao,ScreenTransition.Fade,{IDSolicitante: Param("IDSolicitante")})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =btnReferencia2.Size
+        Text: ="Aprovação da Área"
+        Width: =btnReferencia2.Width
+        X: =249
+        Y: =573
+        ZIndex: =12
+
+    Button1_4 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(50, 194, 185, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia2.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Navigate(TelaMeusPedidos,ScreenTransition.Fade,{IDSolicitante: Param("IDSolicitante")})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =btnReferencia2.Size
+        Text: ="Monitorar pedidos"
+        Width: =btnReferencia2.Width
+        X: =563
+        Y: =397
+        ZIndex: =14
+
+    icnReferencia As icon.ShoppingCart:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =51
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.ShoppingCart
+        OnSelect: |-
+            =UpdateContext({varVerBotao:!varVerBotao})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =51
+        X: =433
+        Y: =278
+        ZIndex: =15
+
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =59
+        X: =507
+        Y: =301
+        ZIndex: =16
+
+    Rectangle3_3 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(50, 194, 185, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =67
+        X: =496
+        Y: =417
+        ZIndex: =17
+
+    Button7_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(54, 176, 75, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =UpdateContext({varVerBotao3:true})
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =150
+        RadiusBottomRight: =150
+        RadiusTopLeft: =btnReferencia.RadiusTopLeft
+        RadiusTopRight: =150
+        Size: =10.5
+        Text: =""
+        Width: =btnReferencia.Width
+        X: =121
+        Y: =599
+        ZIndex: =18
+
+    Rectangle3_4 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(54, 176, 75, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        OnSelect: =
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =87
+        X: =161
+        Y: =600
+        ZIndex: =19
+
+    Icon17 As icon.Notebook:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =icnReferencia.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Notebook
+        OnSelect: |-
+            =UpdateContext({varVerBotao1:!varVerBotao1})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =icnReferencia.Width
+        X: =716
+        Y: =620
+        ZIndex: =20
+
+    Rectangle3_5 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(184, 0, 0, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =67
+        X: =747
+        Y: =672
+        ZIndex: =21
+
+    Icon20 As icon.CheckBadge:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =77
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.CheckBadge
+        OnSelect: |-
+            =UpdateContext({varVerBotao3:!varVerBotao3})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =61
+        X: =138
+        Y: =608
+        ZIndex: =22
+
+    Rectangle3_7 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(184, 0, 0, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =51
+        X: =763
+        Y: =620
+        ZIndex: =23
+
+    Button1_5 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(UsuáriosdoOffice365.UserProfile(User().Email).Mail in 'config - SolicitaMaterial'.'Email Almoxarife',DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia2.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Navigate(TelaInformarRecebimento,ScreenTransition.Fade,{IDSolicitante: Param("IDSolicitante")})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =btnReferencia2.Size
+        Text: ="Recebimento"
+        Width: =btnReferencia2.Width
+        X: =814
+        Y: =653
+        ZIndex: =24
+
+    btnAprovacaoFinanceira As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(UsuáriosdoOffice365.UserProfile(User().Email).Mail in 'config - SolicitaMaterial'.'Email Financeiro',DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(54, 176, 75, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia2.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Navigate(TelaFinanceiroManutencao,ScreenTransition.Fade,{IDSolicitante: Param("IDSolicitante")})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =btnReferencia2.Size
+        Text: ="Financeiro Manutenção"
+        Width: =btnReferencia2.Width
+        X: =249
+        Y: =625
+        ZIndex: =25
+
+    Rectangle3_8 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(54, 176, 75, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        OnSelect: =
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =49
+        X: =200
+        Y: =645
+        ZIndex: =26
+
+    Icon5 As icon.Clock:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =99
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Clock
+        OnSelect: |-
+            =UpdateContext({varVerBotao2:!varVerBotao2})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =68
+        X: =421
+        Y: =368
+        ZIndex: =27
+
+    Label9 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(39, 113, 194, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =50
+        PaddingLeft: =0
+        Size: =15
+        Text: ="Campos do Solicitante"
+        Visible: =varVerBotao5
+        Width: =219
+        X: =515
+        Y: =202
+        ZIndex: =28
+
+    Label9_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(54, 176, 75, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        PaddingLeft: =0
+        Size: =15
+        Text: ="Campos do Lider da Área e Responsável Financeiro"
+        Visible: =varVerBotao5
+        Width: =256
+        X: =200
+        Y: =519
+        ZIndex: =29
+
+    Label9_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(184, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        PaddingLeft: =0
+        Size: =15
+        Text: ="Campos do Almoxarifado"
+        Visible: =varVerBotao5
+        Width: =256
+        X: =779
+        Y: =532
+        ZIndex: =30
+
+    Button12 As button:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =3
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =63
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =UpdateContext({varVerBotao5:true})
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =150
+        RadiusBottomRight: =150
+        RadiusTopLeft: =150
+        RadiusTopRight: =150
+        Size: =10.5
+        Text: =""
+        Width: =67
+        X: =1099
+        Y: =58
+        ZIndex: =31
+
+    Icon11 As icon.QuestionMark:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        Height: =45
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.QuestionMark
+        OnSelect: |-
+            =UpdateContext({varVerBotao5:!varVerBotao5})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =70
+        X: =1096
+        Y: =68
+        ZIndex: =32
+
+    Label8 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(0, 84, 148, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =36
+        PaddingLeft: =0
+        Size: =10
+        Text: ="AJUDA"
+        Width: =63
+        X: =1100
+        Y: =96
+        ZIndex: =33
+
+    Icon9 As icon.Search:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =1
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Search
+        OnSelect: =Navigate(TelaPesquisarKardex,ScreenTransition.Fade)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =1102
+        Y: =169
+        ZIndex: =34
+
+    Label9_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Color: =RGBA(39, 113, 194, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =51
+        PaddingLeft: =0
+        Size: =15
+        Text: ="Pesquisar Kardex"
+        Visible: =varVerBotao5
+        Width: =175
+        X: =921
+        Y: =172
+        ZIndex: =35
+
+    btnAprovacaoFinanceira_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(UsuáriosdoOffice365.UserProfile(User().Email).Mail in 'config - SolicitaMaterial'.'Email Ferramentas',DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(54, 176, 75, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =btnReferencia2.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Navigate(TelaFinanceiroProducao,ScreenTransition.Fade,{IDSolicitante: Param("IDSolicitante")})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =btnReferencia2.Size
+        Text: ="Financeiro Produção"
+        Width: =btnReferencia2.Width
+        X: =249
+        Y: =676
+        ZIndex: =36
+
+    Rectangle3_6 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(54, 176, 75, 1)
+        FocusedBorderThickness: =1
+        Height: =4
+        HoverFill: =RGBA(0, 120, 212, 1)
+        OnSelect: =
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =87
+        X: =161
+        Y: =691
+        ZIndex: =37
+

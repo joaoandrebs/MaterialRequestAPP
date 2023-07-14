@@ -1,0 +1,21 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: =
+    StartScreen: =TelaInicial
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
+    SharePointIntegration As hostControl.SharePointHostControlVariant:
+        DataSource: =[@Solicitantes]
+        OnCancel: =ResetForm(FormSolicitante)
+        OnEdit: =EditForm(FormSolicitante)
+        OnNew: =NewForm(FormSolicitante)
+        OnSave: =SubmitForm(FormSolicitante)
+        OnView: =ViewForm(FormSolicitante)
+        SelectedHidden: =LookUp([@Solicitantes], ID = Self.SelectedListItemID)
+
